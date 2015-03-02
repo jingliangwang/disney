@@ -20,21 +20,12 @@
     <div class="loading_text">loading...</div>
   </div>
 
-
-
-  <div class="landscape" style="display:none">
+  <div class="landscape">
     <div class="iphone"></div>
     <div class="iphone_text">请将屏幕竖向浏览</div>
   </div>
 
-  <div id="J_weixin" class="hide">
-    <div class="wx_inner">
-      <a style="height:100%; width:100%; display:block; overflow:hidden" href="javascript:hideWeixin();"></a>
-    </div>
-  </div>  
-
-
-  <div class="swiper-container">
+  <div class="content swiper-container">
     <div class="swiper-wrapper">
 
 
@@ -237,9 +228,9 @@ tt.addEventListener("webkitAnimationEnd", function(){ //动画结束
   flag=true;
 }, false);
 
-// window.addEventListener("devicemotion", function(event) {
-//     alert(event);
-// }, true);
+window.addEventListener("devicemotion", function(event) {
+    console.info(event);
+}, true);
 
 
 
