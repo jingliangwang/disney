@@ -494,14 +494,14 @@ body {
 .loading_text{
   width:100%; height:30px; display:block;color:#fff; overflow:hidden; text-align:center;
 }
-@media screen and (orientation: Portrait) {
+@media screen and (orientation: portrait) {
 .landscape{
   display:none; 
 }
   
 }
 @media screen and (orientation: landscape) {
-.landscape {
+.landscape{
   position: fixed;
   display: block;
   left: 0px;
@@ -510,7 +510,8 @@ body {
   bottom: 0px;
   z-index: 999;
   display:block; 
-  background-color: #0039a4;
+  background-color: #000;
+  color: #fff;
 } 
 .landscape .iphone {
   background-image: url(../images/iphone.png);
@@ -544,6 +545,8 @@ body {
 .content {
   display: none
 }
+
+.landscape{display: block;}
 }
 
 @media only screen and (max-width: 480px) and (min-width: 379px) {
