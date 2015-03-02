@@ -29,7 +29,7 @@
     <div class="swiper-wrapper">
 
 
-     <div class="swiper-slide pageone">
+      <div class="swiper-slide pageone">
         <div class="text animated hinge delay1 slideinTo">上海迪士尼度假区诚聘英才</div>
         <img class="chuanqi animated zoomInbig" width="54" height="147" src="images/p1-0.png" alt="">
         <img class="logo animated fadeInRight" src="images/logo.png" width="75" height="45" alt="">
@@ -51,7 +51,7 @@
           <p class="paddingtop40 animated fadeInLeft">一个<span class="fontsize32 coloryellow">传奇</span>，即将揭开崭<span class="fontsize32 coloryellow">新篇章</span></p>
           <p class="animated delay_5 fadeInRight">你是<span class="fontsize32">旁观</span>，还是<span class="fontsize32">参与</span>？</p>
           <p class="animated delay1 zoomIn">加入上海迪士尼度假区，<br/>
-  你将成为<strong class="coloryellow">历史的创造者、传奇的一部分</strong>！</p>
+          你将成为<strong class="coloryellow">历史的创造者、传奇的一部分</strong>！</p>
         </div>
       </div>
 
@@ -113,15 +113,13 @@
         </div>
       </div>
       <div class="swiper-slide pagetwo pageight">
-        <img class="join animated bounceInLeft" width="243" src="images/p8-2.png" alt="">
-        <div id="snow4"></div>
+        <img id="snow4" class="join animated bounceInLeft" width="243" src="images/p8-2.png" alt="">
         <div class="tum" id="tum">
           <img class="pic" width="57" src="images/p8-3.png" alt="">          
           <span class="animated fadeIn">手机摇一摇，有惊喜！</span>
         </div>
         <img class="snowhite1" width="199" src="images/p8-4.png" alt="">  
-        <img class="snowhite2" width="286" src="images/p8-5.png" alt="">       
-
+        <img class="snowhite2 hide" width="286" src="images/p8-5.png" alt="">       
       </div>
 
       <div class="swiper-slide pagenine">
@@ -166,12 +164,6 @@
   <script src="js/swiper.js"></script>
 
   <script>
-
-
-
-
-
-
  window.onload = function() {
   $('#J_loading').hide();
   var mySwiper = new Swiper('.swiper-container',{   
@@ -182,10 +174,10 @@
   onFirstInit:function(){
   },
   onSlideChangeEnd: function(){
-    //var sprite=['1','5','2','4','3'];
     var num=mySwiper.activeIndex;//当前第几页
-    //$('.swiper-slide').eq(num).addClass('current');
-    //console.info(num);
+    if(num==7){
+      init();
+    }
    
   }
   });
@@ -215,12 +207,11 @@
         fnFive($(this),i);
       }
       i++;
-    }    
-
+    }
   });
 
 
-var tt = document.getElementById('snow4');
+var tt = document.getElementById('snow4'),snowhite2=$(".pageight .snowhite2");
 tt.addEventListener("webkitAnimationStart", function(){ //动画开始时事件
     flag=false;
 }, false);
@@ -228,14 +219,37 @@ tt.addEventListener("webkitAnimationEnd", function(){ //动画结束
   flag=true;
 }, false);
 
-window.addEventListener("devicemotion", function(event) {
-    console.info(event);
-}, true);
+
+function init(){
+　　if (window.DeviceMotionEvent) {
+　　　　// 移动浏览器支持运动传感事件
+        snowhite2.hide();
+　　　　window.addEventListener('devicemotion', deviceMotionHandler, false);　　　　
+　　} else{
+　　　　// 移动浏览器不支持运动传感事件
+　　　　snowhite2.show();
+　　} 
+}
+
+var x,y,z,last_x,last_y,last_z,yaoSpeed=3000;//yaospeed设定摇动速度
+function deviceMotionHandler(eventData){
+  var acceleration = eventData.accelerationIncludingGravity,//获取重力加速度
+  curTime = new Date().getTime(),
+  diffTime = curTime -last_update;
+  if(diffTime>100){
+    last_update = curTime;
+    x = acceleration.x; 
+　　y = acceleration.y; 
+　　z = acceleration.z;
+    var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+    if(speed>yaoSpeed){
+      　snowhite2.show();
+    }
+  }
 
 
 
-
-
+}
 
  }; 
 </script>
