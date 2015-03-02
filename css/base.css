@@ -1,0 +1,30 @@
+body{
+	margin:0;
+	padding:0;
+}
+.box{
+	position: absolute;
+	right: 0;
+	top: 150px;
+	background: url("../images/p2-5.png") no-repeat;
+	background-size:289px 289px;
+	backface-visibility: hidden;
+	overflow: hidden;
+    width:289px;
+	height:289px;
+
+}
+#cas{
+	opacity: 1;
+	-webkit-transition:opacity .5s;
+	-ms-transition:opacity .5s;
+	-moz-transition:opacity .5s;
+	
+	
+	
+
+}
+
+.noOp{
+	opacity: 0 !important;
+}
