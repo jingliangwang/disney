@@ -49,7 +49,7 @@ body {
 .fontsize20{font-size: 20px;}
 .coloryellow{color: #ffea00}
 .colorwhite{color: #ffffff}
-.paddingtop40{padding-top: 40px;}
+.paddingtop60{padding-top: 60px;}
 .paddingtop30{padding-top: 30px;}
 .tl-c{text-align: center;}
 .margintop2{margin-top: 2px;}
@@ -74,7 +74,13 @@ body {
 }*/
 
 .pageone{background:url(../images/bg_1.jpg) no-repeat center top;background-size:cover;}
-.pageone .text{display: inline-block;width:22px;font-size: 20px;padding:22px 0 0 24px;line-height: 120%;color:red;height:0px;overflow: hidden;}
+.pageone .text{display: inline-block;
+  width:22px;font-size: 20px;
+  padding:22px 0 0 24px;line-height: 120%;
+  color:red;height:0px;overflow: hidden;
+  position: absolute;
+  top: 0;
+}
 .pageone .chuanqi{position: absolute;top:167px;left:57px;}
 .pageone .logo{position: absolute;right:14px;bottom: 14px;}
 
@@ -109,6 +115,7 @@ body {
   background-size:106px auto;
   height: 100%;
 }
+.pagethree #Html5Video{margin: 0 auto;display: block;width: 90%;}
 
 .pagefour,.pagefive{background:#4055a4 url(../images/p4-1.png) no-repeat center center;background-size:cover;}
 .pagefour .tum{background-color: #252760;}
@@ -198,7 +205,7 @@ body {
 
 .pageseven .pr span{
   position: absolute;
-  color: #51280e;
+  color: #fff;
 
 }
 
@@ -256,12 +263,12 @@ body {
 .pageight .tum{background-color: #25183c;}
 .pageight .snowhite1{
   position: absolute;
-  bottom: 68px;
+  bottom: 78px;
   left: 72px;
 }
 .pageight .snowhite2{
   position: absolute;
-  bottom: 27px;
+  bottom: 47px;
   left: 18px;
 }
 
