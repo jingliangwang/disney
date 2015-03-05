@@ -218,7 +218,7 @@
       $('.slide-btn').hide().eq(num).show();
     },2000);
     if(num==7){
-      init();
+      init(num);
     }
    
   }
@@ -262,7 +262,7 @@ tt.addEventListener("webkitAnimationEnd", function(){ //动画结束
 }, false);
 
 
-function init(){
+function init(num){
     
 　　if (window.DeviceMotionEvent) {
 　　　　// 移动浏览器支持运动传感事件
@@ -288,13 +288,12 @@ function deviceMotionHandler(eventData){
     if(speed>yaoSpeed){
       　snowhite2.fadeIn('slow');
 
-        if ("vibrate" in navigator) {
-          navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
-           
-          if (navigator.vibrate) {
-              navigator.vibrate([500, 300, 100]);
-          }
-        }
+        // if ("vibrate" in navigator) {
+        //   navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;           
+        //   if (navigator.vibrate) {
+        //       navigator.vibrate([500, 300, 100]);
+        //   }
+        // }
 
 
     }
