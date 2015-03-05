@@ -85,10 +85,11 @@
 
       <div class="swiper-slide pagefour pagefive">
         <div class="text animated fadeInUpBig">
-          <p>上海迪士尼度假区是<span class="coloryellow fontsize25">梦幻成真</span>的地方，</p>
+          <p>上海迪士尼度假区是梦幻成真的地方，</p>
           <p>更是传奇开始的地方。</p>
-          <p><span class="coloryellow fontsize25">从这里出发</span>你可以谱写自己的梦幻篇章！</p>
-          <img class="animated" width="95" src="images/p5-1.png" alt="">          
+          <p>从这里出发你可以谱写自己的梦幻篇章！</p>
+          <p class="paddingtop30">招聘涵盖</p>
+     
         </div>
           
         <div class="animated delay1 fadeIn">
@@ -106,7 +107,7 @@
 
       <div class="swiper-slide pagetwo pagesix">
         <img class="title animated delay2 fadeInDown" width="222" src="images/p6-2.png" alt="">
-        <img class="lion animated hinge-4 zoomInbig" width="310" src="images/p6-4.png" alt="">        
+        <img class="lion animated hinge-6 zoomInbigB" width="310" src="images/p6-4.png" alt="">        
         <div class="tum animated fadeInUp" id="tum">
           <img class="pic" width="57" src="images/p6-3.png" alt="">
         </div>
@@ -138,7 +139,7 @@
           <span class="animated fadeIn">手机摇一摇，有惊喜！</span>
         </div>
         <img class="snowhite1" width="199" src="images/p8-4.png" alt="">  
-        <img class="snowhite2" width="286" src="images/p8-5.png" alt="">
+        <img class="snowhite2 hide" width="286" src="images/p8-5.png" alt="">
         <div class="slide-btn"><img src="images/arrow_top.png" width="5%"></div>       
       </div> 
 
@@ -149,7 +150,7 @@
         </div>
         <div class="slide-btn"><img src="images/arrow_top.png" width="5%"></div>
       </div>
-       
+      
       <div class="swiper-slide pagetwo pageten">
         <img class="join animated bounceInLeft" width="170" src="images/p10-2.png" alt="">        
         <div class="tum" id="tum">
@@ -161,7 +162,7 @@
       </div>
 
       <div class="swiper-slide pageleven">
-        <p class="fontsize12 colorwhite tl-c paddingtop30 animated fadeInDown"><span class="fontsize20 coloryellow">一步之隔，天差地别。</span><br/>
+        <p class="fontsize12 colorwhite tl-c paddingtop30 animated fadeInDown">一步之隔，天差地别。<br/>
         在上海迪士尼度假区，我们与你一起你跨出这一步，<br/>
         在更大的空间里造就你，并与你一起谱写我们的篇章！
         </p>
@@ -221,9 +222,8 @@
     var timeout=setTimeout(function(){
       $('.slide-btn').hide().eq(num).show();
     },2000);
-    //$('.slide-btn').hide().eq(num).delay(3000).fadeIn();
     if(num==7){
-      //init();
+      init();
     }
    
   }
@@ -236,7 +236,7 @@
       flag=true,
       className=['true60','true120','true180','true240','true300','true360-1'],
       snow4=$('.pagefive .snow4'),
-      textArr=['实习生招聘<br/>(国际暑期实习项目！)','游客服务经理招聘','有经验的一线员工招聘','其他专业及管理人士招聘','其他专业及管理人士招聘','应届毕业生招聘'],
+      textArr=['实习生招聘<br/>(国际暑期实习！)','游客服务经理招聘','有经验的一线员工招聘','其他专业及管理人士招聘','其他专业及管理人士招聘','应届毕业生招聘'],
       pagefiveMore=$('.pagefive .more');
 
   function fnFive(obj,i){
@@ -268,35 +268,35 @@ tt.addEventListener("webkitAnimationEnd", function(){ //动画结束
 
 
 function init(){
+    
 　　if (window.DeviceMotionEvent) {
 　　　　// 移动浏览器支持运动传感事件
         snowhite2.hide();
-　　　　window.addEventListener('devicemotion', deviceMotionHandler, false);　　　　
+　　　　window.addEventListener('devicemotion',deviceMotionHandler, false);　　　　
 　　} else{
 　　　　// 移动浏览器不支持运动传感事件
 　　　　snowhite2.show();
 　　} 
 }
 
-var x,y,z,last_x,last_y,last_z,yaoSpeed=3000,last_update=0;//yaospeed设定摇动速度
+var x,y,z,last_x=0,last_y=0,last_z=0,yaoSpeed=30,last_update=0;//yaospeed设定摇动速度
 function deviceMotionHandler(eventData){
-  console.info(eventData);
-//   var acceleration = eventData.accelerationIncludingGravity,//获取重力加速度
-//   curTime = new Date().getTime(),
-//   diffTime = curTime -last_update;
-//   if(diffTime>100){
-//     last_update = curTime;
-//     x = acceleration.x; 
-// 　　y = acceleration.y; 
-// 　　z = acceleration.z;
-//     var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
-//     if(speed>yaoSpeed){
-//       　snowhite2.show();
-//     }
-//   }
-
-
-
+  var acceleration = eventData.accelerationIncludingGravity,//获取重力加速度
+  curTime = new Date().getTime(),
+  diffTime = curTime -last_update;
+  if(diffTime>3000){    
+    last_update = curTime;
+    x = acceleration.x; 
+　　y = acceleration.y; 
+　　z = acceleration.z;
+    var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+    if(speed>yaoSpeed){
+      　snowhite2.show();
+    }
+     last_x = x;
+     last_y = y;
+     last_z = z;
+  }
 }
 
  }; 
