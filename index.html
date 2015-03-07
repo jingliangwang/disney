@@ -27,13 +27,14 @@
 
   <div class="content swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide pageone">
+
+     <div class="swiper-slide pageone">
         <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="hide">
-          <polygon id="pone" class="animatedtwo delay3 fadeOutUp" points="-20,0 320,0 150,220" style="fill:#ff0000;stroke:#000000;stroke-width:0"/>
-          <polygon id="ptwo" class="animatedtwo delay3 fadeOutLeft" points="0,50 150,240 0,300" style="fill:#f3af00;stroke:#000000;stroke-width:0"/>
-          <polygon id="pthree" class="animatedtwo delay3 fadeOutDownLeft" points="0,320 170,250 170,480 0,480" style="fill:#226f2e;stroke:#000000;stroke-width:0"/>
-          <polygon id="pfour" class="animatedtwo delay3 fadeOutDownRight" points="190,240 320,290 320,480 190,480" style="fill:#4055a4;stroke:#000000;stroke-width:0"/>
-          <polygon id="pfive" class="animatedtwo delay3 fadeOutRight" points="180,220 320,30 320,270" style="fill:#3b1a68;stroke:#000000;stroke-width:0"/>
+          <polygon id="pone" class="animatedtwo delay3 fadeOutUp" points="-20,0 320,0 150,220" style="fill:#ff0000;stroke:none;stroke-width:0"/>
+          <polygon id="ptwo" class="animatedtwo delay3 fadeOutLeft" points="0,50 150,240 0,300" style="fill:#f3af00;stroke:none;stroke-width:0"/>
+          <polygon id="pthree" class="animatedtwo delay3 fadeOutDownLeft" points="0,320 170,250 170,480 0,480" style="fill:#226f2e;stroke:none;stroke-width:0"/>
+          <polygon id="pfour" class="animatedtwo delay3 fadeOutDownRight" points="190,240 320,290 320,480 190,480" style="fill:#4055a4;stroke:none;stroke-width:0"/>
+          <polygon id="pfive" class="animatedtwo delay3 fadeOutRight" points="180,220 320,30 320,270" style="fill:#3b1a68;stroke:none;stroke-width:0"/>
         </svg>
 
         <div class="text animated hinge delay5 slideinTo">上海迪士尼度假区诚聘英才</div>
@@ -43,7 +44,7 @@
         <img class="logo animated delay4 fadeInRight" src="images/logo.png" width="75" height="45" alt="">
         <div class="slide-btn"><img src="images/arrow_top.png" width="5%"></div>
       </div>
-
+ 
       <div class="swiper-slide pagetwo">
         <img class="join animated bounceInLeft" width="169" src="images/p2-2.png" alt="">
         <div class="box animated delay1 fadeIn">
@@ -87,8 +88,7 @@
           <p>上海迪士尼度假区是梦幻成真的地方，</p>
           <p>更是传奇开始的地方。</p>
           <p>从这里出发你可以谱写自己的梦幻篇章！</p>
-          <p class="paddingtop30">招聘涵盖</p>
-     
+          <img class="pic" width="93" src="images/p5-1.png" alt="">     
         </div>
           
         <div class="animated delay1 fadeIn">
@@ -111,7 +111,7 @@
           <img class="pic" width="57" src="images/p6-3.png" alt="">
         </div>
         <div class="slide-btn"><img src="images/arrow_top.png" width="5%"></div> 
-      </div>
+      </div> 
 
       <div class="swiper-slide pageseven">
         <img class="pic1 animated fadeInDown" width="275" src="images/p7-2.png" alt="">
@@ -143,9 +143,12 @@
       </div> 
 
       <div class="swiper-slide pagenine">
-        <img class="txt animated delay1 fadeInDown" width="206" src="images/p9-2.png" alt="">    
-        <div class="team animated delay1 fadeIn">
-          <img class="animated delay3 fadeOut hinge_1" width="320" src="images/p9-3.png" alt="">
+        <img class="txt animated delay1 fadeInDown" width="206" src="images/p9-2.png" alt="">
+   
+        <div id="team">
+          <img class="animated delay3 zoomInbigC" width="128" src="images/p9-5.png" alt=""><img style="margin:0 4px;" class="animated delay4 zoomInbigC" width="90" src="images/p9-6.png" alt=""><img class="animated delay5 zoomInbigC" width="94" src="images/p9-7.png" alt=""><img class="animated delay6 zoomInbigC" width="90" src="images/p9-8.png" alt=""><img  style="margin:0 4px;" class="animated delay7 zoomInbigC" width="94" src="images/p9-9.png" alt=""><img class="animated delay8 zoomInbigC" width="128" src="images/p9-10.png" alt="">
+
+
         </div>
         <div class="slide-btn"><img src="images/arrow_top.png" width="5%"></div>
       </div>
@@ -159,7 +162,7 @@
         <img class="mulan" width="309" src="images/p10-4.png" alt="">
         <div class="slide-btn"><img src="images/arrow_top.png" width="5%"></div>
       </div>
-
+      
       <div class="swiper-slide pageleven">
         <p class="fontsize12 colorwhite tl-c paddingtop30 animated fadeInDown">一步之隔，天差地别。<br/>
         在上海迪士尼度假区，我们与你一起你跨出这一步，<br/>
@@ -170,9 +173,9 @@
         <div class="step2 animated delay4 hinge slideinToright"></div>
         <div class="slide-btn"><img src="images/arrow_top.png" width="5%"></div>  
       </div>
-      
+
       <div class="swiper-slide pageone pagend">
-        <img class="txt animated delay1 hinge fadeIn" src="images/p12-2.png" width="100%" alt="">
+        <img class="txt animated delay_5 rollIn" src="images/p12-2.png" width="100%" alt="">
         <img class="logo" src="images/p12-3.png" width="26%" alt="">
       </div>
 
@@ -208,13 +211,13 @@
     mode: 'vertical',
   onFirstInit:function(){
     $('.pageone .text,.pageone .chuanqi').eq(1).hide();
-
     setTimeout(function(){
       slidebtn.hide().eq(0).fadeIn();
     },6000);
   },
   onSlideChangeEnd: function(){
     var num=mySwiper.activeIndex;//当前第几页
+    var team=$('.pagenine #team');
     if(num==0){
       $('.pageone .text').hide().eq(1).show(); 
       $('.pageone .chuanqi').hide().eq(1).show();          
@@ -223,12 +226,27 @@
     var timeout=setTimeout(function(){
       slidebtn.hide().eq(num).show();
     },2000);
+
+    if(num!=8||num!=7){
+        team.removeClass('teambg').find('img').show('fast');
+    }
+
+    if(num!=7){
+      $('.snowhite2').hide();   
+    }
+
+    
     if(num==7){
       init(num);
     }
-   
+    if(num==8){
+      setTimeout(function(){
+        team.addClass('teambg').find('img').fadeOut('slow');
+      },12*1000)
+    }
   }
-  });
+
+});
 
 
   //pagefive;
@@ -280,7 +298,7 @@ function init(num){
 　　} 
 }
 
-var x,y,z,last_x=0,last_y=0,last_z=0,yaoSpeed=5,last_update=0;//yaospeed设定摇动速度
+var x,y,z,last_x=0,last_y=0,last_z=0,yaoSpeed=10,last_update=0;//yaospeed设定摇动速度
 function deviceMotionHandler(eventData){
   var acceleration = eventData.accelerationIncludingGravity,//获取重力加速度
   curTime = new Date().getTime(),
@@ -294,7 +312,7 @@ function deviceMotionHandler(eventData){
     if(speed>yaoSpeed){
       　snowhite2.fadeIn('slow');
 
-        // if ("vibrate" in navigator) {
+        // if ("vibrate" in navigator) {//震动
         //   navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;           
         //   if (navigator.vibrate) {
         //       navigator.vibrate([500, 300, 100]);

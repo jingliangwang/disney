@@ -13,8 +13,8 @@ Copyright (c) 2014 Daniel Eden
           animation-fill-mode: both;
 }
 .animatedtwo {
-  -webkit-animation-duration:2s;
-          animation-duration:2s;
+  -webkit-animation-duration:1s;
+          animation-duration:1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -81,6 +81,14 @@ Copyright (c) 2014 Daniel Eden
 .animated.delay6{
   animation-delay:6s;
   -webkit-animation-delay:6s;
+}
+.animated.delay7{
+  animation-delay:7s;
+  -webkit-animation-delay:7s;
+}
+.animated.delay8{
+  animation-delay:8s;
+  -webkit-animation-delay:8s;
 }
 
 @-webkit-keyframes bounce {
@@ -1438,7 +1446,7 @@ Copyright (c) 2014 Daniel Eden
   }
 
   100% {
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: translate3d(-100%, 100%, 0);
             transform: translate3d(-100%, 100%, 0);
   }
@@ -1450,7 +1458,7 @@ Copyright (c) 2014 Daniel Eden
   }
 
   100% {
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: translate3d(-100%, 100%, 0);
             transform: translate3d(-100%, 100%, 0);
   }
@@ -1466,7 +1474,7 @@ Copyright (c) 2014 Daniel Eden
   }
 
   100% {
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: translate3d(100%, 100%, 0);
             transform: translate3d(100%, 100%, 0);
   }
@@ -1478,7 +1486,7 @@ Copyright (c) 2014 Daniel Eden
   }
 
   100% {
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: translate3d(100%, 100%, 0);
             transform: translate3d(100%, 100%, 0);
   }
@@ -1523,9 +1531,9 @@ Copyright (c) 2014 Daniel Eden
   }
 
   100% {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
+    opacity: 1;
+    -webkit-transform: translate3d(-100%, -80%, 0);
+            transform: translate3d(-100%, -80%, 0);
   }
 }
 
@@ -1535,9 +1543,9 @@ Copyright (c) 2014 Daniel Eden
   }
 
   100% {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
+    opacity: 1;
+    -webkit-transform: translate3d(-100%, -80%, 0);
+            transform: translate3d(-100%, -80%, 0);
   }
 }
 
@@ -1581,9 +1589,9 @@ Copyright (c) 2014 Daniel Eden
   }
 
   100% {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
+    opacity: 1;
+    -webkit-transform: translate3d(100%, -80%, 0);
+            transform: translate3d(100%, -80%, 0);
   }
 }
 
@@ -1593,9 +1601,9 @@ Copyright (c) 2014 Daniel Eden
   }
 
   100% {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
+    opacity: 1;
+    -webkit-transform: translate3d(100%, -80%, 0);
+            transform: translate3d(100%, -80%, 0);
   }
 }
 
@@ -1639,7 +1647,7 @@ Copyright (c) 2014 Daniel Eden
   }
 
   100% {
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: translate3d(0, -100%, 0);
             transform: translate3d(0, -100%, 0);
   }
@@ -1651,7 +1659,7 @@ Copyright (c) 2014 Daniel Eden
   }
 
   100% {
-    opacity: 0;
+    opacity: 1;
     -webkit-transform: translate3d(0, -100%, 0);
             transform: translate3d(0, -100%, 0);
   }
@@ -1765,7 +1773,7 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-.animated.flip {
+.swiper-slide-active .animated.flip {
   -webkit-backface-visibility: visible;
           backface-visibility: visible;
   -webkit-animation-name: flip;
@@ -2595,7 +2603,7 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-.rollIn {
+.swiper-slide-active .rollIn {
   -webkit-animation-name: rollIn;
           animation-name: rollIn;
 }
@@ -2717,6 +2725,35 @@ Copyright (c) 2014 Daniel Eden
 .swiper-slide-active .zoomInbigB {
   -webkit-animation-name: zoomInbigB;
           animation-name: zoomInbigB;
+}
+
+@-webkit-keyframes zoomInbigC {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(5, 5, 5) rotate3d(3, 1, 1, -120deg);
+            transform: scale3d(5, 5, 5) rotate3d(3, 1, 1, -120deg);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomInbigC {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(5, 5, 5) rotate3d(3, 1, 1, -120deg);
+            transform: scale3d(5, 5, 5) rotate3d(3, 1, 1, -120deg);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.swiper-slide-active .zoomInbigC {
+  -webkit-animation-name: zoomInbigC;
+          animation-name: zoomInbigC;
 }
 
 @-webkit-keyframes zoomInDown {

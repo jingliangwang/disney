@@ -154,6 +154,7 @@ body {
   padding-top: 20px;
 }
 .pagefive div.text p{padding-bottom: 10px;}
+.pagefive div.text img{margin-top:40px;}
 
 .pagefive .snow{
   top:133px;
@@ -182,6 +183,9 @@ body {
   font-size: 20px;
 }
 
+.pagefive .snow1{top: 110px;}
+
+
 
 .pagesix{background:#f3af00 url(../images/p6-1.png) no-repeat center center;background-size:cover;}
 .pagesix .tum{
@@ -203,11 +207,11 @@ body {
 .pageseven .pic1{margin-top: 40px;}
 .pageseven .pic2{margin-top:30px;}
 .pageseven .pic3{margin-top:25px;}
-.pageseven .pic4{margin-top:55px;}
+.pageseven .pic4{margin-top:65px;}
 
 .pageseven .pr span{
   position: absolute;
-  color: #fff;
+  color: #51280e;
 
 }
 
@@ -275,8 +279,10 @@ body {
 }
 
 .pagenine{background:#3b1a68 url(../images/p9-1.png) no-repeat center center;background-size:cover;}
-.pagenine .team{width: 100%;height: 124px;background:url(../images/p9-4.png) no-repeat center center;background-size:320px auto;margin-top: 13px;}
-.pagenine .txt,.pagenine .team img{display:block;margin:0 auto;}
+.pagenine #team{width:320px;height: 124px;margin: 13px auto 0;}
+.pagenine #team img{margin-bottom:2px;}
+.pagenine .teambg{background:url(../images/p9-4.png) no-repeat center center;background-size:320px auto;}
+.pagenine .txt{display:block;margin:0 auto;}
 .pagenine .txt{margin-top: 60px;}
 
 .pageten{background:#226f2e url(../images/p10-1.png) no-repeat center center;background-size:cover;}
