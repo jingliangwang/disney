@@ -28,18 +28,18 @@
   <div class="content swiper-container">
     <div class="swiper-wrapper">
 
-     <div class="swiper-slide pageone">
+      <div class="swiper-slide pageone">
         <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="hide">
-          <polygon id="pone" class="animatedtwo delay3 fadeOutUp" points="-20,0 320,0 150,220" style="fill:#ff0000;stroke:none;stroke-width:0"/>
-          <polygon id="ptwo" class="animatedtwo delay3 fadeOutLeft" points="0,50 150,240 0,300" style="fill:#f3af00;stroke:none;stroke-width:0"/>
-          <polygon id="pthree" class="animatedtwo delay3 fadeOutDownLeft" points="0,320 170,250 170,480 0,480" style="fill:#226f2e;stroke:none;stroke-width:0"/>
-          <polygon id="pfour" class="animatedtwo delay3 fadeOutDownRight" points="190,240 320,290 320,480 190,480" style="fill:#4055a4;stroke:none;stroke-width:0"/>
-          <polygon id="pfive" class="animatedtwo delay3 fadeOutRight" points="180,220 320,30 320,270" style="fill:#3b1a68;stroke:none;stroke-width:0"/>
+          <polygon id="pone" class="animatedtwo delay1 fadeOutUp" points="-20,0 320,0 150,220" style="fill:#ff0000;stroke:none;stroke-width:0"/>
+          <polygon id="ptwo" class="animatedtwo delay1 fadeOutLeft" points="0,50 150,240 0,300" style="fill:#f3af00;stroke:none;stroke-width:0"/>
+          <polygon id="pthree" class="animatedtwo delay1 fadeOutDownLeft" points="0,320 170,250 170,480 0,480" style="fill:#226f2e;stroke:none;stroke-width:0"/>
+          <polygon id="pfour" class="animatedtwo delay1 fadeOutDownRight" points="190,240 320,290 320,480 190,480" style="fill:#4055a4;stroke:none;stroke-width:0"/>
+          <polygon id="pfive" class="animatedtwo delay1 fadeOutRight" points="180,220 320,30 320,270" style="fill:#3b1a68;stroke:none;stroke-width:0"/>
         </svg>
 
-        <div class="text animated hinge delay5 slideinTo">上海迪士尼度假区诚聘英才</div>
+        <div class="text animated hinge delay3 slideinTo">上海迪士尼度假区诚聘英才</div>
         <div class="text hide animated hinge delay2 slideinTo">上海迪士尼度假区诚聘英才</div>
-        <img class="chuanqi animated delay4 zoomInbig" width="54" height="147" src="images/p1-0.png" alt="">
+        <img class="chuanqi animated delay2 zoomInbig" width="54" height="147" src="images/p1-0.png" alt="">
         <img class="chuanqi hide animated delay1 zoomInbig" width="54" height="147" src="images/p1-0.png" alt="">
         <img class="logo animated delay4 fadeInRight" src="images/logo.png" width="75" height="45" alt="">
         <div class="slide-btn"><img src="images/arrow_top.png" width="5%"></div>
@@ -66,7 +66,6 @@
           <div class="slide-btn"><img src="images/arrow_top.png" width="5%"></div>
         </div>
       </div>
-
 
       <div class="swiper-slide pagetwo pagefour">
           <img class="join animated bounceInLeft" width="164" src="images/p4-2.png" alt="">
@@ -129,7 +128,7 @@
           <span class="txt6 animated delay6 fadeInRightone">规划职业发展</span>
         </div>
         <div class="slide-btn"><img src="images/arrow_top.png" width="5%"></div>
-      </div>
+      </div> 
 
       <div class="swiper-slide pagetwo pageight">
         <img class="join animated bounceInLeft" width="243" src="images/p8-2.png" alt="">
@@ -143,8 +142,7 @@
       </div> 
 
       <div class="swiper-slide pagenine">
-        <img class="txt animated delay1 fadeInDown" width="206" src="images/p9-2.png" alt="">
-   
+        <img class="txt animated delay1 fadeInDown" width="206" src="images/p9-2.png" alt="">        
         <div id="team">
           <img class="animated delay3 zoomInbigC" width="128" src="images/p9-5.png" alt=""><img style="margin:0 4px;" class="animated delay4 zoomInbigC" width="90" src="images/p9-6.png" alt=""><img class="animated delay5 zoomInbigC" width="94" src="images/p9-7.png" alt=""><img class="animated delay6 zoomInbigC" width="90" src="images/p9-8.png" alt=""><img  style="margin:0 4px;" class="animated delay7 zoomInbigC" width="94" src="images/p9-9.png" alt=""><img class="animated delay8 zoomInbigC" width="128" src="images/p9-10.png" alt="">
 
@@ -217,32 +215,29 @@
   },
   onSlideChangeEnd: function(){
     var num=mySwiper.activeIndex;//当前第几页
-    var team=$('.pagenine #team');
+    var team=$('.pagenine #team'),settime;
     if(num==0){
       $('.pageone .text').hide().eq(1).show(); 
       $('.pageone .chuanqi').hide().eq(1).show();          
     }
-    clearTimeout(timeout);    
+    clearTimeout(timeout); 
+    clearTimeout(settime);    
     var timeout=setTimeout(function(){
       slidebtn.hide().eq(num).show();
     },2000);
 
-    if(num!=8||num!=7){
-        team.removeClass('teambg').find('img').show('fast');
-    }
+    team.removeClass('teambg').find('img').addClass('zoomInbigC').removeClass('flipOutX');
+    $('.snowhite2').hide();   
 
-    if(num!=7){
-      $('.snowhite2').hide();   
-    }
 
     
     if(num==7){
       init(num);
     }
     if(num==8){
-      setTimeout(function(){
-        team.addClass('teambg').find('img').fadeOut('slow');
-      },12*1000)
+      settime=setTimeout(function(){
+        team.addClass('teambg').find('img').removeClass('zoomInbigC').addClass('flipOutX');
+      },10*1000);
     }
   }
 
@@ -303,7 +298,7 @@ function deviceMotionHandler(eventData){
   var acceleration = eventData.accelerationIncludingGravity,//获取重力加速度
   curTime = new Date().getTime(),
   diffTime = curTime -last_update;
-  if(diffTime>3000){    
+  if(diffTime>2000){    
     last_update = curTime;
     x = acceleration.x; 
 　　y = acceleration.y; 
@@ -311,15 +306,12 @@ function deviceMotionHandler(eventData){
     var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
     if(speed>yaoSpeed){
       　snowhite2.fadeIn('slow');
-
         // if ("vibrate" in navigator) {//震动
         //   navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;           
         //   if (navigator.vibrate) {
         //       navigator.vibrate([500, 300, 100]);
         //   }
         // }
-
-
     }
      last_x = x;
      last_y = y;
