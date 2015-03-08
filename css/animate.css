@@ -50,7 +50,7 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-delay:0.5s;
 }
 
-.animated.delay2{
+.animated.delay2,.animatedtwo.delay2{
   animation-delay:2s;
   -webkit-animation-delay:2s;
 }
