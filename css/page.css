@@ -181,6 +181,8 @@ body {
   left: 160px;
   color:#4055a4;
   font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .pagefive .snow1{top: 110px;}
