@@ -16,8 +16,18 @@
 
 
   <div id="J_loading">
-    <div class="loading_img"></div>
-    <div class="loading_text">loading...</div>
+    <div class="loading_img">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+    <div class="loading_text">
+      loading...
+    </div>
   </div>
 
   <div class="landscape">
@@ -194,7 +204,7 @@
   <script src="js/swiper.js"></script>
   <script>
  window.onload = function() {
-  $('#J_loading').hide();
+  //$('#J_loading').hide();
   $('.pageone svg').show();
     var win=$(window),pone=$('#pone'),ptwo=$('#ptwo'),pthree=$('#pthree'),pfour=$('#pfour'),pfive=$('#pfive');
     var w=win.width(),
