@@ -322,6 +322,11 @@ body {
   left: 0;
   bottom:30%;
 }
+.pagend .mouse{
+  position: absolute;
+  bottom: 40%;
+  right: 20px;
+}
 
 .slide-btn {
 position: absolute;

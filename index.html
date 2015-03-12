@@ -69,9 +69,8 @@
           <p class="paddingtop60 animated fadeInLeft">一个<span class="coloryellow">传奇</span>，即将揭开崭<span class="coloryellow">新篇章</span></p>
           <p class="animated delay_5 fadeInRight">你是旁观，还是参与？</p>
           <p class="animated delay1 zoomIn">加入上海迪士尼度假区，<br/>你将成为历史的创造者、传奇的一部分！</p>
-          <!-- <video id="Html5Video" controls="controls" src="http://www.w3school.com.cn/example/html5/mov_bbb.mp4"></video> -->
           <div id="easyhtml5video" style="position:relative;width:320px;height:240px;">
-            <video controls="controls" poster="video/disney_original.jpg" width="320" height="240" title="disney_original">
+            <video controls="controls" poster="video/disney_original.jpg" width="320" height="240" title="disney_original" preload="autoplay">
             <source src="video/disney_original.m4v" type="video/mp4" />
             <source src="video/disney_original.webm" type="video/webm" />
             <source src="video/disney_original.ogv" type="video/ogg" />
@@ -108,13 +107,13 @@
           
         <div class="animated delay1 fadeIn">
           <img class="snow animated true360 infinite hinge-4" width="93" src="images/p4-4.png" alt="">
-          <img class="snow1" width="45" src="images/p4-5.png" alt="">
-          <img class="snow3" width="65" src="images/p4-5.png" alt="">
+          <img class="snow1" style="opacity:0.5" width="45" src="images/p4-5.png" alt="">
+          <img class="snow3" style="opacity:0.5" width="65" src="images/p4-5.png" alt="">
         </div>
         <div class=" animated delay2 fadeIn">
           <img id="snow4" class="snow4 animated" src="images/p5-2.png" alt="" width="270">
           <p class="more">应届毕业生<br/>招聘</p>
-          <p class="notice"><img width="19" src="images/p5-3.png" alt="">点击雪花，获得更多招聘信息！</p>  
+          <p class="notice"><img width="19" src="images/p5-3.png" alt="">点击这片雪花，了解多种招聘项目！</p>  
         </div>
         <div class="slide-btn"><img src="images/arrow_top.png" width="5%"></div>
       </div>
@@ -144,7 +143,7 @@
           <span class="txt6 animated delay6 fadeInRightone">规划职业发展</span>
         </div>
         <div class="slide-btn"><img src="images/arrow_top.png" width="5%"></div>
-      </div> 
+      </div>  
 
       <div class="swiper-slide pagetwo pageight">
         <img class="join animated bounceInLeft" width="243" src="images/p8-2.png" alt="">
@@ -160,9 +159,7 @@
       <div class="swiper-slide pagenine">
         <img class="txt animated delay1 fadeInDown" width="206" src="images/p9-2.png" alt="">        
         <div id="team">
-          <img class="animated delay3 zoomInbigC" width="128" src="images/p9-5.png" alt=""><img style="margin:0 4px;" class="animated delay4 zoomInbigC" width="90" src="images/p9-6.png" alt=""><img class="animated delay5 zoomInbigC" width="94" src="images/p9-7.png" alt=""><img class="animated delay6 zoomInbigC" width="90" src="images/p9-8.png" alt=""><img  style="margin:0 4px;" class="animated delay7 zoomInbigC" width="94" src="images/p9-9.png" alt=""><img class="animated delay8 zoomInbigC" width="128" src="images/p9-10.png" alt="">
-
-
+          <img class="animated delay3 zoomInbigC" width="128" src="images/p9-5.png" alt=""><img style="margin:0 4px;" class="animated delay3_5 zoomInbigC" width="90" src="images/p9-6.png" alt=""><img class="animated delay4 zoomInbigC" width="94" src="images/p9-7.png" alt=""><img class="animated delay4_5 zoomInbigC" width="90" src="images/p9-8.png" alt=""><img  style="margin:0 4px;" class="animated delay5 zoomInbigC" width="94" src="images/p9-9.png" alt=""><img class="animated delay5_5 zoomInbigC" width="128" src="images/p9-10.png" alt="">
         </div>
         <div class="slide-btn"><img src="images/arrow_top.png" width="5%"></div>
       </div>
@@ -191,6 +188,7 @@
       <div class="swiper-slide pageone pagend">
         <a href="http://www.shdrcareers.com/"><img class="txt animated delay_5 rollIn" src="images/p12-2.png" width="100%" alt=""></a>
         <img class="logo" src="images/p12-3.png" width="26%" alt="">
+        <img class="mouse animated delay2 zoomInsmall infinite" src="images/p12-4.png" width="26" alt="">
       </div>
 
     </div>
@@ -231,7 +229,7 @@
   },
   onSlideChangeEnd: function(){
     var num=mySwiper.activeIndex;//当前第几页
-    var team=$('.pagenine #team'),settime;
+    var team=$('.pagenine #team'),settime,teamImg=team.find('img');
     if(num==0){
       $('.pageone .text').hide().eq(1).show(); 
       $('.pageone .chuanqi').hide().eq(1).show();          
@@ -241,10 +239,15 @@
     var timeout=setTimeout(function(){
       slidebtn.hide().eq(num).show();
     },2000);
+    var delayArr=['delay3','delay3_5','delay4','delay4_5','delay5','delay5_5'];
+    teamImg.each(function(i){
+      teamImg.eq(i).addClass(delayArr[i]);
+    });
 
     team.removeClass('teambg').find('img').addClass('zoomInbigC').removeClass('flipOutX');
-    $('.snowhite2').hide();   
 
+    $('.snowhite2').hide();   
+    
 
     
     if(num==7){
@@ -252,8 +255,11 @@
     }
     if(num==8){
       settime=setTimeout(function(){
+        teamImg.each(function(i){
+          teamImg.eq(i).removeClass(delayArr[i]);
+        });
         team.addClass('teambg').find('img').removeClass('zoomInbigC').addClass('flipOutX');
-      },10*1000);
+      },7*1000);
     }
   }
 
