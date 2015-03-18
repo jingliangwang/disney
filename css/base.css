@@ -5,7 +5,7 @@ body{
 .box{
 	position: absolute;
 	right: 0;
-	top: 150px;
+	bottom:50px;
 	background: url("../images/p2-5.png") no-repeat;
 	background-size:289px 289px;
 	backface-visibility: hidden;
@@ -19,10 +19,6 @@ body{
 	-webkit-transition:opacity .5s;
 	-ms-transition:opacity .5s;
 	-moz-transition:opacity .5s;
-	
-	
-	
-
 }
 
 .noOp{
