@@ -553,6 +553,7 @@ top:auto;
   }
   .pageten .track {
     bottom: 140px;
+    width: 100%;
   }
 
   .paddingtop30 {
