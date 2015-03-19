@@ -1,6 +1,6 @@
 var canvas = document.getElementById("cas"),
 	ctx = canvas.getContext("2d");
-var x1, y1, a =200,
+var x1, y1, a =100,
 	timeout, totimes = 1000000,
 	jiange = 30;
 canvas.width = 289;
