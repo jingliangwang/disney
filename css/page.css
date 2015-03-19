@@ -286,6 +286,7 @@ body {
 .pagenine .teambg{background:url(../images/p9-4.png) no-repeat center center;background-size:320px auto;}
 .pagenine .txt{display:block;margin:0 auto;}
 .pagenine .txt{margin-top: 60px;}
+.pagenine .teamtxt{font-weight: bold;color: #fff;font-size:28px;text-align: center;}
 
 .pageten{background:#226f2e url(../images/p10-1.png) no-repeat center center;background-size:cover;}
 .pageten .tum{background-color: #194028;}
