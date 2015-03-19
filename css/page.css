@@ -548,12 +548,12 @@ top:auto;
   }
 
   .pageten .mulan {
-    bottom: 152px;
+    bottom: 102px;
     left: 4px;
     width: 96.8%;
   }
   .pageten .track {
-    bottom: 140px;
+    bottom: 90px;
     width: 100%;
   }
 
@@ -567,4 +567,36 @@ top:auto;
     margin-top: 20px;
   }
 
+}
+
+/*文字发光*/
+.twinkle{
+  -webkit-animation: twinkle 1s ease-in-out infinite alternate;
+  -moz-animation: twinkle 1s ease-in-out infinite alternate;
+  animation: twinkle 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes twinkle {
+  from {
+    opacity:0.5;
+    text-shadow: 0 0 5px #fff,
+               0 0 10px  #fff,
+               0 0 15px  #fff,
+               0 0 20px  #B6FF00,
+               0 0 35px  #B6FF00,
+               0 0 40px  #B6FF00,
+               0 0 50px #B6FF00,
+               0 0 75px #B6FF00;
+  }
+  to {
+    opacity: 1;
+    text-shadow: 0 0 2px #fff,
+               0 0 5px #fff,
+               0 0 7px #fff,
+               0 0 10px #B6FF00,
+               0 0 17px #B6FF00,
+               0 0 20px #B6FF00,
+               0 0 25px #B6FF00,
+               0 0 37px #B6FF00;
+  }
 }
