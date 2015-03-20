@@ -574,6 +574,7 @@ top:auto;
   -webkit-animation: twinkle 1s ease-in-out infinite alternate;
   -moz-animation: twinkle 1s ease-in-out infinite alternate;
   animation: twinkle 1s ease-in-out infinite alternate;
+  font-size: 14px;
 }
 
 @-webkit-keyframes twinkle {
