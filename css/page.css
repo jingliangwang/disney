@@ -103,6 +103,12 @@ body {
   bottom:38px;
   left: 20px;
 }
+.pagetwo .picbg{
+  position: absolute;
+  right: 0;
+  bottom:80px; 
+  
+}
 .pagethree p{
   font-size: 15px;
   text-align: center;
@@ -518,7 +524,7 @@ top:auto;
 
 }
   .pagefive .snow4 {
-    left: -121px;
+    left: -100px;
     bottom: 172px;
   }
   .pagefive .more {
@@ -571,23 +577,22 @@ top:auto;
 
 /*文字发光*/
 .twinkle{
-  -webkit-animation: twinkle 1s ease-in-out infinite alternate;
-  -moz-animation: twinkle 1s ease-in-out infinite alternate;
-  animation: twinkle 1s ease-in-out infinite alternate;
-  font-size: 14px;
+  -webkit-animation: twinkle 1.5s ease-in-out infinite alternate;
+  -moz-animation: twinkle 1.5s ease-in-out infinite alternate;
+  animation: twinkle 1.5s ease-in-out infinite alternate;
+  font-size: 16px;
 }
 
 @-webkit-keyframes twinkle {
   from {
     opacity:0.5;
-    text-shadow: 0 0 5px #fff,
-               0 0 10px  #fff,
-               0 0 15px  #fff,
+    text-shadow: 0 0 2px #fff,
+               0 0 4px  #fff,
+               0 0 5px  #fff,
+               0 0 10px  #B6FF00,
                0 0 20px  #B6FF00,
-               0 0 35px  #B6FF00,
-               0 0 40px  #B6FF00,
-               0 0 50px #B6FF00,
-               0 0 75px #B6FF00;
+               0 0 25px  #B6FF00,
+
   }
   to {
     opacity: 1;
@@ -596,8 +601,6 @@ top:auto;
                0 0 7px #fff,
                0 0 10px #B6FF00,
                0 0 17px #B6FF00,
-               0 0 20px #B6FF00,
-               0 0 25px #B6FF00,
-               0 0 37px #B6FF00;
+               0 0 10px #B6FF00;
   }
 }

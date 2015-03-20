@@ -1,10 +1,13 @@
 var canvas = document.getElementById("cas"),
 	ctx = canvas.getContext("2d");
-var x1, y1, a =100,
+var x1, y1, a =200,
 	timeout, totimes = 1000000,
 	jiange = 30;
-canvas.width = 289;
-canvas.height = 289;
+$(window).on('load',function(){
+
+canvas.width = $('.picbg').width();
+canvas.height = $('.picbg').height();
+
 var img = new Image();
 img.src = "images/p2-4.png";
 img.onload = function() {
@@ -13,8 +16,15 @@ img.onload = function() {
 	tapClip()
 }
 
+});
+
+
+
+
+
 //通过修改globalCompositeOperation来达到擦除的效果
 function tapClip() {
+	console.info(43);
 	var hastouch = "ontouchstart" in window ? true : false,
 		tapstart = hastouch ? "touchstart" : "mousedown",
 		tapmove = hastouch ? "touchmove" : "mousemove",
